@@ -3,7 +3,10 @@ author: Felipe Echanique Torres
 description: 'This action allows to use Salesforce DX CLI from GitHub Actions'
 inputs:
   sfdx-auth-url:
-    description: 'Authorize a Salesforce org using an SFDX auth URL'
+    description: |
+      Authorize a Salesforce org using an SFDX auth URL
+      The secret must have the format force://<refreshToken>@<instanceUrl> or force://<clientId>:<clientSecret>:<refreshToken>@<instanceUrl>
+      You can obtain the URL from a authorized org from your local machine using: sfdx force:org:display -u ORG-ALIAS --verbose
     required: true
 runs:
   using: 'node12'

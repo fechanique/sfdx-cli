@@ -1,4 +1,4 @@
-# Salesforce SFDX action
+# Salesforce DX CLI action
 
 This action allows to use the Salesforce DX CLI from GitHub Actions
 

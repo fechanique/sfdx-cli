@@ -1,0 +1,12 @@
+name: 'SFDX'
+description: 'SFDX CLI for GitHub Actions'
+inputs:
+  sfdx-auth-url:
+    description: 'SFDX auth URL'
+    required: true
+outputs:
+  time:
+    description: 'The time we we greeted you'
+runs:
+  using: 'node12'
+  main: 'index.js'

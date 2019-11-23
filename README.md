@@ -21,7 +21,7 @@ jobs:
   test:
   
     runs-on: ubuntu-latest
-	
+    
     steps:
       - uses: actions/sfdx
         with:

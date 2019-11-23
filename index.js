@@ -1,7 +1,7 @@
-const core = require('@actions/core');
-const github = require('@actions/github');
-const exec = require('child_process').exec;
-const fs = require('fs');
+const core = require('@actions/core')
+const github = require('@actions/github')
+const exec = require('child_process').exec
+const fs = require('fs')
 
 try {
   installSFDX(()=>{
@@ -10,7 +10,7 @@ try {
     })
   })
 } catch (error) {
-  core.setFailed(error.message);
+  core.setFailed(error.message)
 }
 
 function installSFDX(next){
@@ -28,7 +28,7 @@ function createAuthFile(next){
   fs.writeFile('./sfdx_auth.txt', core.getInput('sfdx-auth-url'), function (error, data){
     if(error) throw(stderr)
     next()
-  });
+  })
 }
 
 function authSFDX(){

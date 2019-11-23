@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - uses: actions/sfdx-cli
+      - uses: fechanique/sfdx-cli@v1.0
         with:
           sfdx-auth-url: ${{ secrets.AUTH_SECRET }}
       - name: sfdx-test-run
